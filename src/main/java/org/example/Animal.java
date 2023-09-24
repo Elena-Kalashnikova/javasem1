@@ -1,9 +1,12 @@
 package org.example;
 
+import org.example.Clinic.Flyable;
+import org.example.Clinic.Illable;
+
 import java.time.LocalDate;
 import java.util.List;
 
-public abstract class Animal {
+public abstract class Animal implements Illable{
     protected String name;
     protected double weight;
     protected Owner owner;
@@ -104,6 +107,11 @@ public abstract class Animal {
 
     public String getTYPE() {
         return TYPE;
+    }
+
+
+    public  void heal(){
+        System.out.println("Ветеринар лечит " + this.getTYPE());
     }
 
 

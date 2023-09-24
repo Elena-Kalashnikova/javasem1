@@ -1,9 +1,11 @@
 package org.example;
 
+import org.example.Clinic.Run;
+
 import java.time.LocalDate;
 import java.util.List;
 
-public class Cat extends Animal{
+public class Cat extends Animal implements Run {
     private String breed;
 
     public Cat(String name, double weight, Owner owner, LocalDate birthDay, List<Vaccination> vaccinations, Color color, String breed) {
@@ -21,4 +23,17 @@ public class Cat extends Animal{
     public void swim(){
         System.out.println(this.TYPE +  " Плаваю");
     }
+
+//    @Override
+//    public void heal() {
+//        System.out.println("Ветеринар лечит " + this.getTYPE());
+//    }
+
+
+    @Override
+    public double getRunSpeed() {
+
+        return 5.2;
+    }
 }
+
