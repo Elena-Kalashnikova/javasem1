@@ -20,20 +20,20 @@ public class Main {
         for (Animal animal : clinic.getPacients()) {
 
             if (animal instanceof Flyable) {
-                System.out.println(((Flyable) animal).getFlySpeed());
+                System.out.println("Я летаю " + animal.getTYPE() + " со скоростью "+ ((Flyable) animal).getFlySpeed());
 
             } else System.out.println("Не летаю " + animal.getTYPE());
         }
         for (Animal animal : clinic.getPacients()) {
             if (animal instanceof Swimable) {
-                System.out.println(((Swimable) animal).getSwimSpeed());
+                System.out.println("Я плаваю "+ animal.getTYPE()+ " со скоростью "+((Swimable) animal).getSwimSpeed());
 
             }
             else System.out.println("Не плаваю " + animal.getTYPE());
         }
         for (Animal animal : clinic.getPacients()) {
             if (animal instanceof Run) {
-                System.out.println(((Run) animal).getRunSpeed());
+                System.out.println("Я бегаю "+ animal.getTYPE() + " со скоростью "+ ((Run) animal).getRunSpeed());
             }
             else System.out.println("Не бегаю " + animal.getTYPE());
             //animal.heal();
